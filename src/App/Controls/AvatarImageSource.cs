@@ -3,7 +3,8 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using SkiaSharp;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Controls
 {

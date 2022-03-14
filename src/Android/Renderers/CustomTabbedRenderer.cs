@@ -4,7 +4,8 @@ using Bit.App.Pages;
 using Bit.Droid.Renderers;
 using Google.Android.Material.BottomNavigation;
 using Google.Android.Material.Navigation;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 

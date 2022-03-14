@@ -10,8 +10,8 @@ using Bit.Core.Utilities;
 using System;
 using System.Threading.Tasks;
 using Bit.Core.Enums;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Bit.App

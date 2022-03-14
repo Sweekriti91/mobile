@@ -3,7 +3,8 @@ using System.Linq;
 using Bit.App.Controls;
 using Bit.App.Resources;
 using Bit.Core.Models.View;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

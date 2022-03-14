@@ -6,7 +6,8 @@ using Bit.Core.Utilities;
 using Firebase.Messaging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.Droid.Push
 {

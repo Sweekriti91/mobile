@@ -11,7 +11,8 @@ using Bit.Core.Exceptions;
 using Bit.Core.Models.View;
 using Bit.Core.Utilities;
 using Bit.Core;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

@@ -8,8 +8,9 @@ using Bit.App.Utilities;
 using Bit.Core.Enums;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.Domain;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using Microsoft.Maui.Essentials;;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

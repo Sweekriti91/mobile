@@ -3,7 +3,8 @@ using Android.Content;
 using Android.Views;
 using Bit.App.Controls;
 using Bit.Droid.Renderers;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(ExtendedDatePicker), typeof(ExtendedDatePickerRenderer))]

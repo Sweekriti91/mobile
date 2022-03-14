@@ -3,7 +3,8 @@ using System;
 using System.Threading.Tasks;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.Request;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

@@ -1,6 +1,7 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 
 namespace Bit.App.Pages
 {

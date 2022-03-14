@@ -7,10 +7,11 @@ using Bit.Core.Enums;
 using Bit.Core.Utilities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Essentials;;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 
 namespace Bit.App.Pages
 {

@@ -1,7 +1,8 @@
 ﻿using Android.Content;
 using Android.Views.InputMethods;
 using Bit.Droid.Renderers;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(SearchBar), typeof(CustomSearchBarRenderer))]

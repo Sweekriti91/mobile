@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Bit.App.Abstractions;
 using Bit.Core.Models.Domain;
-using Xamarin.Essentials;
+using Microsoft.Maui.Essentials;;
 
 namespace Bit.App.Pages
 {

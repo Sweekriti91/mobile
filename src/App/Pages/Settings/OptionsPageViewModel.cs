@@ -6,7 +6,8 @@ using Bit.Core.Enums;
 using Bit.Core.Utilities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

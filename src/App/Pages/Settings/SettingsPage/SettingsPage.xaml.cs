@@ -7,7 +7,8 @@ using Bit.App.Controls;
 using Bit.App.Pages.Accounts;
 using Bit.App.Resources;
 using Bit.Core.Utilities;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

@@ -3,7 +3,8 @@ using System.Globalization;
 using Bit.Core;
 using Bit.Core.Enums;
 using Bit.Core.Models.View;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Utilities
 {

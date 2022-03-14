@@ -6,7 +6,7 @@ using Bit.Core;
 using Bit.Core.Abstractions;
 using Bit.Droid.Receivers;
 using Plugin.CurrentActivity;
-using Xamarin.Essentials;
+using Microsoft.Maui.Essentials;;
 
 namespace Bit.Droid.Services
 {

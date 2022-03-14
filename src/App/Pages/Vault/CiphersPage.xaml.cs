@@ -5,7 +5,8 @@ using Bit.Core.Utilities;
 using System;
 using System.Linq;
 using Bit.App.Controls;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Bit.App.Pages
 {

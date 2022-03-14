@@ -3,7 +3,8 @@ using Android.Content;
 using Android.Content.Res;
 using Bit.Droid.Renderers;
 using Bit.Droid.Utilities;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(Picker), typeof(CustomPickerRenderer))]

@@ -1,4 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <UseMaui>true</UseMaui>
+    <TargetFramework>net6.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+    <PropertyGroup>
+		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">True</UseInterpreter>
+	</PropertyGroup>
+   <ItemGroup>
+    <ProjectReference Include="..\App\App.csproj">
+      <Project>{EE44C6A1-2A85-45FE-8D9B-BF1D5F88809C}</Project>
+      <Name>App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{4b8a8c41-9820-4341-974c-41e65b7f4366}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+
+    <ItemGroup>
+    <!-- <PackageReference Include="Portable.BouncyCastle">
+      <Version>1.8.10</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
+    <PackageReference Include="Xamarin.AndroidX.AutoFill" Version="1.1.0.9" />
+    <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.11" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.10" />
+    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.5.2" />
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.8" /> -->
+  
+    <PackageReference Include="Xamarin.Firebase.Messaging" Version="122.0.0.3" />
+    <!-- <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4" />
+    <PackageReference Include="Xamarin.Google.Dagger" Version="2.37.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
+      <Version>117.0.1</Version>
+    </PackageReference> -->
+  </ItemGroup>
+</Project>
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -281,4 +323,4 @@
     <Folder Include="Resources\values-v30\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-</Project>
+</Project> -->

@@ -8,7 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bit.Core.Enums;
 using Bit.Core.Models.Domain;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using ZXing.Client.Result;
 
 namespace Bit.App.Pages
