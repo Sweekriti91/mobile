@@ -86,7 +86,7 @@ namespace Bit.App.Pages
 
         public async Task<bool> SubmitAsync()
         {
-            if (Xamarin.Essentials.Connectivity.NetworkAccess == Xamarin.Essentials.NetworkAccess.None)
+            if (Microsoft.Maui.Essentials.Connectivity.NetworkAccess == Microsoft.Maui.Essentials.NetworkAccess.None)
             {
                 await _platformUtilsService.ShowDialogAsync(AppResources.InternetConnectionRequiredMessage,
                     AppResources.InternetConnectionRequiredTitle);
@@ -148,7 +148,7 @@ namespace Bit.App.Pages
 
         private async void DeleteAsync(AttachmentView attachment)
         {
-            if (Xamarin.Essentials.Connectivity.NetworkAccess == Xamarin.Essentials.NetworkAccess.None)
+            if (Microsoft.Maui.Essentials.Connectivity.NetworkAccess == Microsoft.Maui.Essentials.NetworkAccess.None)
             {
                 await _platformUtilsService.ShowDialogAsync(AppResources.InternetConnectionRequiredMessage,
                     AppResources.InternetConnectionRequiredTitle);

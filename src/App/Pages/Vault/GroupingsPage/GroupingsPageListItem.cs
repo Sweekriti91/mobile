@@ -11,7 +11,7 @@ namespace Bit.App.Pages
         private string _name;
 
         public FolderView Folder { get; set; }
-        public CollectionView Collection { get; set; }
+        public Microsoft.Maui.Controls.CollectionView Collection { get; set; }
         public CipherView Cipher { get; set; }
         public CipherType? Type { get; set; }
         public string ItemCount { get; set; }

@@ -138,7 +138,7 @@ namespace Bit.App.Pages
             {
                 var options = new List<string> { AppResources.Autofill };
                 if (cipher.Type == CipherType.Login &&
-                    Xamarin.Essentials.Connectivity.NetworkAccess != Xamarin.Essentials.NetworkAccess.None)
+                    Microsoft.Maui.Essentials.Connectivity.NetworkAccess != Microsoft.Maui.Essentials.NetworkAccess.None)
                 {
                     options.Add(AppResources.AutofillAndSave);
                 }

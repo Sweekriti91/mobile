@@ -10,7 +10,6 @@ using Bit.Core.Enums;
 using Bit.Core.Models.Domain;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using ZXing.Client.Result;
 
 namespace Bit.App.Pages
 {

@@ -80,7 +80,7 @@ namespace Bit.Droid
                 toplayout.FilterTouchesWhenObscured = true;
             }
 
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Microsoft.Maui.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             _appOptions = GetOptions();
             LoadApplication(new App.App(_appOptions));
@@ -123,7 +123,7 @@ namespace Bit.Droid
         protected override void OnResume()
         {
             base.OnResume();
-            Xamarin.Essentials.Platform.OnResume();
+            Microsoft.Maui.Essentials.Platform.OnResume();
             AppearanceAdjustments();
 
             ThemeManager.UpdateThemeOnPagesAsync();
@@ -202,7 +202,7 @@ namespace Bit.Droid
             }
             else
             {
-                Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+                Microsoft.Maui.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
                 PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             }
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);

@@ -4,7 +4,6 @@
     x:Class="Bit.App.Controls.CipherViewCell"
     xmlns:controls="clr-namespace:Bit.App.Controls"
     xmlns:u="clr-namespace:Bit.App.Utilities"
-    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:core="clr-namespace:Bit.Core;assembly=BitwardenCore"
     StyleClass="list-row, list-row-platform"
     RowSpacing="0"
@@ -38,12 +37,9 @@
         ShouldUpdateFontSizeDynamicallyForAccesibility="True"
         AutomationProperties.IsInAccessibleTree="False" />
 
-    <ff:CachedImage
+    <Image
         x:Name="_iconImage"
         Grid.Column="0"
-        BitmapOptimizations="True"
-        ErrorPlaceholder="login.png"
-        LoadingPlaceholder="login.png"
         HorizontalOptions="CenterAndExpand"
         VerticalOptions="CenterAndExpand"
         Margin="9"

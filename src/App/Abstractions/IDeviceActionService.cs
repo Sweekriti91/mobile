@@ -1,5 +1,4 @@
-﻿using Bit.Core.Enums;
-using Bit.Core.Models.View;
+﻿using Bit.Core.Models.View;
 using System.Threading.Tasks;
 
 namespace Bit.App.Abstractions
@@ -7,7 +6,7 @@ namespace Bit.App.Abstractions
     public interface IDeviceActionService
     {
         string DeviceUserAgent { get; }
-        Microsoft.Maui.Essentials.DeviceType DeviceType { get; }
+        Bit.Core.Enums.DeviceType DeviceType { get; }
         void Toast(string text, bool longDuration = false);
         bool LaunchApp(string appName);
         Task ShowLoadingAsync(string text);

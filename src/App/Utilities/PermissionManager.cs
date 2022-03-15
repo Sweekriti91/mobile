@@ -1,13 +1,12 @@
 ﻿using System.Threading.Tasks;
- using Microsoft.Maui.Essentials;
-using static Xamarin.Essentials.Permissions;
+
 
 namespace Bit.App.Utilities
 {
     public static class PermissionManager
     {
         public static async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permission)
-            where T : BasePermission
+            where T : Microsoft.Maui.Essentials.Permissions.BasePermission
         {
             var status = await permission.CheckStatusAsync();
             if (status != PermissionStatus.Granted)

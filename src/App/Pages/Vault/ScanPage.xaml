@@ -5,7 +5,6 @@
     x:Class="Bit.App.Pages.ScanPage"
     xmlns:pages="clr-namespace:Bit.App.Pages"
     xmlns:u="clr-namespace:Bit.App.Utilities"
-    xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
     x:Name="_page"
     Title="{u:I18n ScanQrTitle}">
 
@@ -17,13 +16,13 @@
         VerticalOptions="FillAndExpand"
         HorizontalOptions="FillAndExpand">
 
-        <zxing:ZXingScannerView
+        <!--<zxing:ZXingScannerView
             x:Name="_zxing"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand"
             AutomationId="zxingScannerView"
             OnScanResult="OnScanResult">
-        </zxing:ZXingScannerView>
+        </zxing:ZXingScannerView>-->
 
         <Grid
             VerticalOptions="FillAndExpand"

@@ -12,7 +12,7 @@ namespace Bit.App.Controls
             {
                 if (ThemeManager.UsingLightTheme)
                 {
-                    TextColor = Color.Black;
+                    TextColor = Colors.Black;
                 }
             }
         }

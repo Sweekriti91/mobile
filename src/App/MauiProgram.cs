@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Maui;
 
 namespace Bit.App
 {
@@ -16,7 +17,7 @@ namespace Bit.App
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                }).UseMauiCommunityToolkit();
 
             return builder.Build();
         }

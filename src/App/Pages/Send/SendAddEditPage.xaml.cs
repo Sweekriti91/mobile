@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Bit.App.Models;
@@ -11,7 +11,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
-using Entry = Xamarin.Forms.Entry;
+using Entry = Microsoft.Maui.Controls.Entry;
 
 namespace Bit.App.Pages
 {
