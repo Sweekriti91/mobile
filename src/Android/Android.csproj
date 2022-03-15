@@ -3,6 +3,7 @@
     <UseMaui>true</UseMaui>
     <TargetFramework>net6.0-android</TargetFramework>
     <OutputType>Exe</OutputType>
+    <!-- <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest> -->
   </PropertyGroup>
     <PropertyGroup>
 		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">True</UseInterpreter>
