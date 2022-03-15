@@ -55,11 +55,11 @@ namespace Bit.App.Utilities
                 resources.MergedDictionaries.Add(new Base());
 
                 // Platform styles
-                if (Device.RuntimePlatform == Device.Android)
+                if (Microsoft.Maui.Essentials.DeviceInfo.Platform == Microsoft.Maui.Essentials.DevicePlatform.Android)
                 {
-                    resources.MergedDictionaries.Add(new Android());
+                    resources.MergedDictionaries.Add(new Bit.App.Styles.Android());
                 }
-                else if (Device.RuntimePlatform == Device.iOS)
+                else if (Microsoft.Maui.Essentials.DeviceInfo.Platform == Microsoft.Maui.Essentials.DevicePlatform.iOS)
                 {
                     resources.MergedDictionaries.Add(new iOS());
                 }
@@ -124,9 +124,9 @@ namespace Bit.App.Utilities
             {
                 // called from iOS extension
                 var app = new App(new AppOptions { IosExtension = true });
-                return app.RequestedTheme == OSAppTheme.Dark;
+                return app.RequestedTheme == AppTheme.Dark;
             }
-            return Application.Current.RequestedTheme == OSAppTheme.Dark;
+            return Application.Current.RequestedTheme == AppTheme.Dark;
         }
 
         public static void ApplyResourcesToPage(ContentPage page)

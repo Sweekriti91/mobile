@@ -191,7 +191,7 @@ namespace Bit.App.Pages
                     NestedFolders = NestedFolders.GetRange(0, NestedFolders.Count - 1);
                 }
 
-                var uppercaseGroupNames = _deviceActionService.DeviceType == DeviceType.iOS;
+                var uppercaseGroupNames = _deviceActionService.DeviceType == Bit.Core.Enums.DeviceType.iOS;
                 var hasFavorites = FavoriteCiphers?.Any() ?? false;
                 if (hasFavorites)
                 {

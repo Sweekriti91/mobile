@@ -31,7 +31,7 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <Compile Update="Pages\Accounts\EnvironmentPage.xaml.cs">
       <DependentUpon>EnvironmentPage.xaml</DependentUpon>
     </Compile>
@@ -126,7 +126,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Remove="Pages\Accounts\AccountsPopupPage.xaml.cs" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -134,14 +134,14 @@
     <Folder Include="Controls\AccountSwitchingOverlay\" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <EmbeddedResource Update="Controls\CipherViewCell\CipherViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Remove="Pages\Accounts\AccountsPopupPage.xaml" />
-  </ItemGroup>
+  </ItemGroup>-->
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <Compile Update="Styles\Black.xaml.cs">
       <DependentUpon>Black.xaml</DependentUpon>
     </Compile>
@@ -169,7 +169,7 @@
     <EmbeddedResource Update="Styles\Base.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!--<ItemGroup>
     <Compile Update="Resources\AppResources.cs.Designer.cs">

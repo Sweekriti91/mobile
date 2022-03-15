@@ -40,14 +40,14 @@ namespace Bit.App.Controls
 
         public override Func<CancellationToken, Task<Stream>> Stream => GetStreamAsync;
 
-        private Task<Stream> GetStreamAsync(CancellationToken userToken = new CancellationToken())
-        {
-            OnLoadingStarted();
-            userToken.Register(CancellationTokenSource.Cancel);
-            var result = Draw();
-            OnLoadingCompleted(CancellationTokenSource.IsCancellationRequested);
-            return Task.FromResult(result);
-        }
+        //private Task<Stream> GetStreamAsync(CancellationToken userToken = new CancellationToken())
+        //{
+        //    OnLoadingStarted();
+        //    userToken.Register(CancellationTokenSource.Cancel);
+        //    var result = Draw();
+        //    OnLoadingCompleted(CancellationTokenSource.IsCancellationRequested);
+        //    return Task.FromResult(result);
+        //}
 
         private Stream Draw()
         {
