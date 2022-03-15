@@ -17,7 +17,7 @@ using Bit.Core.Enums;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.Data;
 using Newtonsoft.Json;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

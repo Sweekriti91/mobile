@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Bit.Core.Enums;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Essentials;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Bit.App
@@ -413,7 +414,7 @@ namespace Bit.App
 
         private void SyncIfNeeded()
         {
-            if (Xamarin.Essentials.Connectivity.NetworkAccess == Xamarin.Essentials.NetworkAccess.None)
+            if (Connectivity.NetworkAccess == NetworkAccess.None)
             {
                 return;
             }

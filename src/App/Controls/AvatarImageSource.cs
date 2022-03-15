@@ -69,7 +69,7 @@ namespace Bit.App.Controls
             }
 
             var bgColor = StringToColor(upperData);
-            var textColor = Color.White;
+            var textColor = Colors.White;
             var size = 50;
 
             var bitmap = new SKBitmap(

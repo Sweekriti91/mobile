@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 using static Xamarin.Essentials.Permissions;
 
 namespace Bit.App.Utilities

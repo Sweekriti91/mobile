@@ -8,7 +8,7 @@ using Bit.App.Utilities;
 using Bit.Core.Enums;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.Domain;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

@@ -10,7 +10,7 @@ using Bit.Core.Enums;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.View;
 using Bit.Core.Utilities;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

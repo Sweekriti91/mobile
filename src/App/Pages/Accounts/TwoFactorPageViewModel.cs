@@ -12,7 +12,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Bit.App.Utilities;
 using Newtonsoft.Json;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

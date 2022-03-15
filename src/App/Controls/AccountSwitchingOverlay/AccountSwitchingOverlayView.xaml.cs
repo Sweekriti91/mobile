@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Bit.Core.Abstractions;
 using Bit.Core.Utilities;
-using Xamarin.CommunityToolkit.ObjectModel;
+using CommunityToolkit.Maui;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 

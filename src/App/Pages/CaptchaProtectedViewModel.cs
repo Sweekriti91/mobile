@@ -4,7 +4,7 @@ using Bit.App.Abstractions;
 using Bit.App.Resources;
 using Bit.App.Utilities;
 using Bit.Core.Abstractions;
-using Microsoft.Maui.Essentials;;
+ using Microsoft.Maui.Essentials;
 
 namespace Bit.App.Pages
 {
