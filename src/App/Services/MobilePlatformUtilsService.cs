@@ -214,7 +214,9 @@ namespace Bit.App.Services
         {
             try
             {
-                return await CrossFingerprint.Current.IsAvailableAsync();
+                //HACK
+                //return await CrossFingerprint.Current.IsAvailableAsync();
+                return false;
             }
             catch
             {
@@ -227,29 +229,29 @@ namespace Bit.App.Services
         {
             try
             {
-                if (text == null)
-                {
-                    text = AppResources.BiometricsDirection;
-                    if (Device.RuntimePlatform == Device.iOS)
-                    {
-                        var supportsFace = await _deviceActionService.SupportsFaceBiometricAsync();
-                        text = supportsFace ? AppResources.FaceIDDirection : AppResources.FingerprintDirection;
-                    }
-                }
-                var biometricRequest = new AuthenticationRequestConfiguration(AppResources.Bitwarden, text)
-                {
-                    CancelTitle = AppResources.Cancel,
-                    FallbackTitle = fallbackText
-                };
-                var result = await CrossFingerprint.Current.AuthenticateAsync(biometricRequest);
-                if (result.Authenticated)
-                {
-                    return true;
-                }
-                if (result.Status == FingerprintAuthenticationResultStatus.FallbackRequested)
-                {
-                    fallback?.Invoke();
-                }
+                //if (text == null)
+                //{
+                //    text = AppResources.BiometricsDirection;
+                //    if (Device.RuntimePlatform == Device.iOS)
+                //    {
+                //        var supportsFace = await _deviceActionService.SupportsFaceBiometricAsync();
+                //        text = supportsFace ? AppResources.FaceIDDirection : AppResources.FingerprintDirection;
+                //    }
+                //}
+                //var biometricRequest = new AuthenticationRequestConfiguration(AppResources.Bitwarden, text)
+                //{
+                //    CancelTitle = AppResources.Cancel,
+                //    FallbackTitle = fallbackText
+                //};
+                //var result = await CrossFingerprint.Current.AuthenticateAsync(biometricRequest);
+                //if (result.Authenticated)
+                //{
+                //    return true;
+                //}
+                //if (result.Status == FingerprintAuthenticationResultStatus.FallbackRequested)
+                //{
+                //    fallback?.Invoke();
+                //}
             }
             catch { }
             return false;

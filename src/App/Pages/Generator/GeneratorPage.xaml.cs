@@ -119,7 +119,7 @@ namespace Bit.App.Pages
             if (selection == AppResources.PasswordHistory)
             {
                 var page = new GeneratorHistoryPage();
-                await Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(page));
+                await Navigation.PushModalAsync(new Microsoft.Maui.Controls.NavigationPage(page));
             }
         }
 
@@ -131,7 +131,7 @@ namespace Bit.App.Pages
         private async void History_Clicked(object sender, EventArgs e)
         {
             var page = new GeneratorHistoryPage();
-            await Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(page));
+            await Navigation.PushModalAsync(new Microsoft.Maui.Controls.NavigationPage(page));
         }
 
         private async void LengthSlider_DragCompleted(object sender, EventArgs e)
