@@ -22,7 +22,7 @@
         <ResourceDictionary>
             <u:InverseBoolConverter x:Key="inverseBool" />
             <u:IsNullConverter x:Key="isNull" />
-            <ToolbarItem Icon="more_vert.png" Clicked="More_Clicked" Order="Primary"
+            <ToolbarItem IconImageSource="more_vert.png" Clicked="More_Clicked" Order="Primary"
                 x:Name="_moreItem" x:Key="moreItem"
                  AutomationProperties.IsInAccessibleTree="True"
                  AutomationProperties.Name="{u:I18n Options}" />

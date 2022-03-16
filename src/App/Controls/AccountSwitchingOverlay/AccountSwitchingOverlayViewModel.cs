@@ -24,13 +24,13 @@ namespace Bit.App.Controls
             _stateService = stateService;
             _messagingService = messagingService;
             
-            SelectAccountCommand = new AsyncCommand<AccountViewCellViewModel>(SelectAccountAsync,
-                onException: ex => logger.Exception(ex),
-                allowsMultipleExecutions: false);
+            //SelectAccountCommand = new AsyncCommand<AccountViewCellViewModel>(SelectAccountAsync,
+            //    onException: ex => logger.Exception(ex),
+            //    allowsMultipleExecutions: false);
             
-            LongPressAccountCommand = new AsyncCommand<Tuple<ContentPage, AccountViewCellViewModel>>(LongPressAccountAsync,
-                onException: ex => logger.Exception(ex),
-                allowsMultipleExecutions: false);
+            //LongPressAccountCommand = new AsyncCommand<Tuple<ContentPage, AccountViewCellViewModel>>(LongPressAccountAsync,
+            //    onException: ex => logger.Exception(ex),
+            //    allowsMultipleExecutions: false);
         }
 
         // this needs to be a new list every time for the binding to get updated,

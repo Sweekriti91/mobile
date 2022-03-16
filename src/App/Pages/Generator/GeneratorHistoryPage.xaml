@@ -28,7 +28,7 @@
                          Order="Secondary"
                          x:Name="_clearItem"
                          x:Key="clearItem" />
-            <ToolbarItem Icon="more_vert.png"
+            <ToolbarItem IconImageSource="more_vert.png"
                          AutomationProperties.IsInAccessibleTree="True"
                          AutomationProperties.Name="{u:I18n Options}"
                          Clicked="More_Clicked"

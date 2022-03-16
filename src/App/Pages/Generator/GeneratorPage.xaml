@@ -27,7 +27,7 @@
                      Order="Secondary"
                      x:Name="_historyItem"
                      x:Key="historyItem" />
-            <ToolbarItem Icon="more_vert.png"
+            <ToolbarItem IconImageSource="more_vert.png"
                          AutomationProperties.IsInAccessibleTree="True"
                          AutomationProperties.Name="{u:I18n Options}"
                          Clicked="More_Clicked"
@@ -59,7 +59,7 @@
                                Margin="0"
                                HasShadow="False"
                                BackgroundColor="Transparent"
-                               BorderColor="Accent">
+                               BorderColor="Black">
                             <Label
                                 Text="{u:I18n PasswordGeneratorPolicyInEffect}"
                                 StyleClass="text-muted, text-sm, text-bold"

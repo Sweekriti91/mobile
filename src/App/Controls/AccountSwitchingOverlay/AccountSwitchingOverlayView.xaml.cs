@@ -41,17 +41,17 @@ namespace Bit.App.Controls
         {
             InitializeComponent();
 
-            ToggleVisibililtyCommand = new AsyncCommand(ToggleVisibilityAsync,
-                onException: ex => _logger.Value.Exception(ex),
-                allowsMultipleExecutions: false);
+            //ToggleVisibililtyCommand = new AsyncCommand(ToggleVisibilityAsync,
+            //    onException: ex => _logger.Value.Exception(ex),
+            //    allowsMultipleExecutions: false);
 
-            SelectAccountCommand = new AsyncCommand<AccountViewCellViewModel>(SelectAccountAsync,
-                onException: ex => _logger.Value.Exception(ex),
-                allowsMultipleExecutions: false);
+            //SelectAccountCommand = new AsyncCommand<AccountViewCellViewModel>(SelectAccountAsync,
+            //    onException: ex => _logger.Value.Exception(ex),
+            //    allowsMultipleExecutions: false);
 
-            LongPressAccountCommand = new AsyncCommand<AccountViewCellViewModel>(LongPressAccountAsync,
-                onException: ex => _logger.Value.Exception(ex),
-                allowsMultipleExecutions: false);
+            //LongPressAccountCommand = new AsyncCommand<AccountViewCellViewModel>(LongPressAccountAsync,
+            //    onException: ex => _logger.Value.Exception(ex),
+            //    allowsMultipleExecutions: false);
         }
 
         public AccountSwitchingOverlayViewModel ViewModel => BindingContext as AccountSwitchingOverlayViewModel;

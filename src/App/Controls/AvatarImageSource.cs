@@ -38,7 +38,7 @@ namespace Bit.App.Controls
             }
         }
 
-        public override Func<CancellationToken, Task<Stream>> Stream => GetStreamAsync;
+        ////public override Func<CancellationToken, Task<Stream>> Stream => GetStreamAsync;
 
         //private Task<Stream> GetStreamAsync(CancellationToken userToken = new CancellationToken())
         //{

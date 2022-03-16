@@ -35,7 +35,7 @@
                          x:Name="_closeItem" x:Key="closeItem" />
             <ToolbarItem Clicked="EditToolbarItem_Clicked" Order="Primary"
                          x:Name="_editItem" x:Key="editItem" />
-            <ToolbarItem Icon="more_vert.png" Clicked="More_Clicked" Order="Primary"
+            <ToolbarItem IconImageSource="more_vert.png" Clicked="More_Clicked" Order="Primary"
                          x:Name="_moreItem" x:Key="moreItem"
                          AutomationProperties.IsInAccessibleTree="True"
                          AutomationProperties.Name="{u:I18n Options}" />
@@ -685,7 +685,7 @@
         </ContentView>
         <Button
             x:Name="_fab"
-            Image="pencil.png"
+            ImageSource="pencil.png"
             Clicked="EditButton_Clicked"
             Style="{StaticResource btn-fab}"
             AbsoluteLayout.LayoutFlags="PositionProportional"

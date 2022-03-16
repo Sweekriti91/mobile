@@ -8,12 +8,7 @@
           x:Name="_accountView"
           x:DataType="controls:AccountViewCellViewModel">
     <Grid RowSpacing="0"
-          ColumnSpacing="0"
-          xct:TouchEffect.NativeAnimation="True"
-          xct:TouchEffect.Command="{Binding SelectAccountCommand, Source={x:Reference _accountView}}"
-          xct:TouchEffect.CommandParameter="{Binding .}"
-          xct:TouchEffect.LongPressCommand="{Binding LongPressAccountCommand, Source={x:Reference _accountView}}"
-          xct:TouchEffect.LongPressCommandParameter="{Binding .}">
+          ColumnSpacing="0" >
 
         <Grid.Resources>
             <u:InverseBoolConverter x:Key="inverseBool" />
@@ -140,7 +135,6 @@
                 WidthRequest="{OnPlatform 24, iOS=24, Android=26}"
                 HeightRequest="{OnPlatform 24, iOS=24, Android=26}"
                 Source="plus.png"
-                xct:IconTintColorEffect.TintColor="{DynamicResource TextColor}"
                 AutomationProperties.IsInAccessibleTree="False" />
             <Label
                 Text="{u:I18n AddAccount}"
