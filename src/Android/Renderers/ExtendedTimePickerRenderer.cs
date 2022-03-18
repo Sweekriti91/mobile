@@ -5,7 +5,7 @@ using Bit.App.Controls;
 using Bit.Droid.Renderers;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Platform;
 
 [assembly: ExportRenderer(typeof(ExtendedTimePicker), typeof(ExtendedTimePickerRenderer))]
 namespace Bit.Droid.Renderers

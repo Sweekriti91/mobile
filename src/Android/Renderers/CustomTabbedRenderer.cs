@@ -6,7 +6,7 @@ using Google.Android.Material.BottomNavigation;
 using Google.Android.Material.Navigation;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Platform;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(TabbedPage), typeof(CustomTabbedRenderer))]

@@ -3,7 +3,7 @@ using Bit.Droid.Effects;
 using Bit.Droid.Utilities;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Platform;
 
 [assembly: ExportEffect(typeof(FabShadowEffect), "FabShadowEffect")]
 namespace Bit.Droid.Effects

@@ -15,8 +15,6 @@ using Android.Widget.Inline;
 using Bit.App.Resources;
 using Bit.Core.Enums;
 using Android.Views.Autofill;
-using AndroidX.AutoFill.Inline;
-using AndroidX.AutoFill.Inline.V1;
 using Bit.Core.Abstractions;
 using SaveFlags = Android.Service.Autofill.SaveFlags;
 

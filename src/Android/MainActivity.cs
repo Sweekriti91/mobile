@@ -18,7 +18,7 @@ using Bit.Core.Enums;
 using Bit.Core.Utilities;
 using Bit.Droid.Receivers;
 using Bit.Droid.Utilities;
-using ZXing.Net.Mobile.Android;
+using Microsoft.Maui;
 
 namespace Bit.Droid
 {
@@ -27,7 +27,7 @@ namespace Bit.Droid
     // LaunchMode defined in values/manifest.xml for Android 10- and values-v30/manifest.xml for Android 11+
     // See https://github.com/bitwarden/mobile/pull/1673 for details
     [Register("com.x8bit.bitwarden.MainActivity")]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : MauiAppCompatActivity
     {
         private IDeviceActionService _deviceActionService;
         private IMessagingService _messagingService;

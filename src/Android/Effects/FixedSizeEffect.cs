@@ -2,7 +2,7 @@
 using Bit.Droid.Effects;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Platform;
 
 [assembly: ExportEffect(typeof(FixedSizeEffect), "FixedSizeEffect")]
 namespace Bit.Droid.Effects

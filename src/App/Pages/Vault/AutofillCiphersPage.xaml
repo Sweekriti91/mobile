@@ -5,7 +5,7 @@
              xmlns:pages="clr-namespace:Bit.App.Pages"
              xmlns:u="clr-namespace:Bit.App.Utilities"
              xmlns:controls="clr-namespace:Bit.App.Controls"
-             xmlns:effects="clr-namespace:Bit.App.Effects;assembly=BitwardenApp"
+             xmlns:effects="clr-namespace:Bit.App.Effects"
              x:DataType="pages:AutofillCiphersPageViewModel"
              Title="{Binding PageTitle}"
              x:Name="_page">
@@ -15,7 +15,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="search.png" Clicked="Search_Clicked" />
+        <ToolbarItem IconImageSource="search.png" Clicked="Search_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
@@ -91,7 +91,7 @@
         </ContentView>
         <Button
             x:Name="_fab"
-            Image="plus.png"
+            ImageSource="plus.png"
             Clicked="AddButton_Clicked"
             Style="{StaticResource btn-fab}"
             AbsoluteLayout.LayoutFlags="PositionProportional"

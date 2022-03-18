@@ -2,7 +2,7 @@
 using Bit.App.Controls;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Platform;
 using Android.Webkit;
 using AWebkit = Android.Webkit;
 using Java.Interop;

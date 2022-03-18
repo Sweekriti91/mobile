@@ -13,13 +13,14 @@ using Bit.Core.Services;
 using Bit.Core.Utilities;
 using Bit.Droid.Services;
 using Bit.Droid.Utilities;
-using Plugin.CurrentActivity;
-using Plugin.Fingerprint;
 using Xamarin.Android.Net;
 using System.Net.Http;
 using System.Net;
 using Bit.App.Utilities;
 using Bit.App.Pages;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Bit.App;
 #if !FDROID
 using Android.Gms.Security;
 #endif
@@ -35,7 +36,7 @@ namespace Bit.Droid
 #if FDROID
     public class MainApplication : Application
 #else
-    public class MainApplication : Application, ProviderInstaller.IProviderInstallListener
+    public class MainApplication : MauiApplication, ProviderInstaller.IProviderInstallListener
 #endif
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
@@ -179,5 +180,7 @@ namespace Bit.Droid
         {
             await ServiceContainer.Resolve<IEnvironmentService>("environmentService").SetUrlsFromStorageAsync();
         }
+
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
 }
