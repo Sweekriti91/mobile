@@ -39,6 +39,8 @@ namespace Bit.Droid
     public class MainApplication : MauiApplication, ProviderInstaller.IProviderInstallListener
 #endif
     {
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
           : base(handle, transer)
         {
@@ -181,6 +183,6 @@ namespace Bit.Droid
             await ServiceContainer.Resolve<IEnvironmentService>("environmentService").SetUrlsFromStorageAsync();
         }
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        
     }
 }

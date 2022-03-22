@@ -7,8 +7,8 @@ using Bit.Droid.Utilities;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
-[assembly: ExportRenderer(typeof(Editor), typeof(CustomEditorRenderer))]
 namespace Bit.Droid.Renderers
 {
     public class CustomEditorRenderer : EditorRenderer
