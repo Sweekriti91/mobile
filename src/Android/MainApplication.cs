@@ -21,6 +21,9 @@ using Bit.App.Pages;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Bit.App;
+using Microsoft.Maui.Controls.Compatibility.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Bit.Droid.Renderers;
 #if !FDROID
 using Android.Gms.Security;
 #endif
@@ -39,7 +42,20 @@ namespace Bit.Droid
     public class MainApplication : MauiApplication, ProviderInstaller.IProviderInstallListener
 #endif
     {
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override MauiApp CreateMauiApp()
+        {
+            var builder = MauiProgram.CreateMauiApp();
+
+            builder
+                .UseMauiCompatibility()
+                .ConfigureMauiHandlers(handlers =>
+                {
+                    handlers.AddCompatibilityRenderer(typeof(CustomEditorRenderer),
+                        typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.EditorRenderer));
+                });
+
+            return builder.Build();
+        }
 
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
           : base(handle, transer)
@@ -78,7 +94,7 @@ namespace Bit.Droid
         {
             base.OnCreate();
             Bootstrap();
-            CrossCurrentActivity.Current.Init(this);
+            //CrossCurrentActivity.Current.Init(this);
         }
 
         public void OnProviderInstallFailed(int errorCode, Intent recoveryIntent)
@@ -101,18 +117,18 @@ namespace Bit.Droid
 #endif
 
             // Note: This might cause a race condition. Investigate more.
-            Task.Run(() =>
-            {
-                FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
-                FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration
-                {
-                    FadeAnimationEnabled = false,
-                    FadeAnimationForCachedImages = false,
-                    HttpClient = new HttpClient(new AndroidClientHandler() { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate })
-                });
-                ZXing.Net.Mobile.Forms.Android.Platform.Init();
-            });
-            CrossFingerprint.SetCurrentActivityResolver(() => CrossCurrentActivity.Current.Activity);
+            //Task.Run(() =>
+            //{
+            //    FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+            //    FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration
+            //    {
+            //        FadeAnimationEnabled = false,
+            //        FadeAnimationForCachedImages = false,
+            //        HttpClient = new HttpClient(new AndroidClientHandler() { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate })
+            //    });
+            //    ZXing.Net.Mobile.Forms.Android.Platform.Init();
+            //});
+            //CrossFingerprint.SetCurrentActivityResolver(() => CrossCurrentActivity.Current.Activity);
 
             var preferencesStorage = new PreferencesStorageService(null);
             var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);

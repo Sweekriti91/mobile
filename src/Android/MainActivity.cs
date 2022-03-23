@@ -19,6 +19,8 @@ using Bit.Core.Utilities;
 using Bit.Droid.Receivers;
 using Bit.Droid.Utilities;
 using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Essentials;
 
 namespace Bit.Droid
 {
@@ -81,7 +83,7 @@ namespace Bit.Droid
             }
 
             Microsoft.Maui.Essentials.Platform.Init(this, savedInstanceState);
-            Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            //Xamarin.Forms.Forms.Init(this, savedInstanceState);
             _appOptions = GetOptions();
             LoadApplication(new App.App(_appOptions));
 
@@ -97,7 +99,8 @@ namespace Bit.Droid
                 }
                 else if (message.Command == "finishMainActivity")
                 {
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Finish());
+                    //Microsoft.Maui.Controls.Application.dDispatcher.BeginInvokeOnMainThread(() => Finish());
+                    //Microsoft.Maui.Essentials.Device.BeginInvokeOnMainThread(() => Finish());
                 }
                 else if (message.Command == "listenYubiKeyOTP")
                 {
@@ -105,7 +108,7 @@ namespace Bit.Droid
                 }
                 else if (message.Command == "updatedTheme")
                 {
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => AppearanceAdjustments());
+                    //Xamarin.Forms.Device.BeginInvokeOnMainThread(() => AppearanceAdjustments());
                 }
                 else if (message.Command == "exit")
                 {
@@ -203,7 +206,7 @@ namespace Bit.Droid
             else
             {
                 Microsoft.Maui.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-                PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+                //PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             }
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

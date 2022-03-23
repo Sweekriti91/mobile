@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Maui;
+using Microsoft.Maui.Hosting;
 
 namespace Bit.App
 {
-    public static class MauiProgram
+    public class MauiProgram
     {
-        public static MauiApp CreateMauiApp()
+        public static MauiAppBuilder CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
@@ -20,7 +22,7 @@ namespace Bit.App
                 })
                 .UseMauiCommunityToolkit();
 
-            return builder.Build();
+            return builder;
         }
     }
 }
