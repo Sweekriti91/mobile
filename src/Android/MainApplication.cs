@@ -23,6 +23,7 @@ using Microsoft.Maui.Hosting;
 using Bit.App;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
+using System.Collections.Generic;
 using Bit.Droid.Renderers;
 #if !FDROID
 using Android.Gms.Security;
@@ -52,7 +53,47 @@ namespace Bit.Droid
                 {
                     handlers.AddCompatibilityRenderer(typeof(CustomEditorRenderer),
                         typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.EditorRenderer));
-                });
+
+                    handlers.AddCompatibilityRenderer(typeof(CustomEntryRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.EntryRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(CustomPickerRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat.PickerRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(CustomSearchBarRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.SearchBarRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(CustomSwitchRenderer),
+                        typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat.SwitchRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(CustomTabbedRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat.TabbedPageRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedDatePickerRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.DatePickerRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedGridRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.ViewRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedSliderRenderer),
+                        typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.SliderRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedStackLayoutRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.ViewRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedStepperRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.StepperRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(ExtendedTimePickerRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.TimePickerRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(HybridWebViewRenderer),
+                       typeof(Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer));
+
+                    handlers.AddCompatibilityRenderer(typeof(SelectableLabelRenderer),
+                       typeof(Microsoft.Maui.Controls.Compatibility.Platform.Android.LabelRenderer));
+
+                }); ;
 
             return builder.Build();
         }

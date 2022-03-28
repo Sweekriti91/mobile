@@ -8,9 +8,9 @@ using Bit.Droid.Renderers;
 using Bit.Droid.Utilities;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat;
 using Microsoft.Maui.Controls.Platform;
 
-[assembly: ExportRenderer(typeof(Switch), typeof(CustomSwitchRenderer))]
 namespace Bit.Droid.Renderers
 {
     public class CustomSwitchRenderer : SwitchRenderer

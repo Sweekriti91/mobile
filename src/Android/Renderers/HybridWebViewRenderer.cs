@@ -9,11 +9,11 @@ using Java.Interop;
 using Android.Content;
 using Bit.Droid.Renderers;
 using System.ComponentModel;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
-[assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
 namespace Bit.Droid.Renderers
 {
-    public class HybridWebViewRenderer : ViewRenderer<HybridWebView, AWebkit.WebView>
+    public class HybridWebViewRenderer : Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer<HybridWebView, AWebkit.WebView>
     {
         private const string JSFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
 

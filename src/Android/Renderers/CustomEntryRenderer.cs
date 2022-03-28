@@ -9,9 +9,9 @@ using Bit.Droid.Renderers;
 using Bit.Droid.Utilities;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Controls.Platform;
 
-[assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
 namespace Bit.Droid.Renderers
 {
     public class CustomEntryRenderer : EntryRenderer
@@ -89,20 +89,20 @@ namespace Bit.Droid.Renderers
 
         private void UpdateBorderColor()
         {
-            if (Control != null)
-            {
-                var states = new[]
-                {
-                    new[] { Android.Resource.Attribute.StateFocused }, // focused
-                    new[] { -Android.Resource.Attribute.StateFocused }, // unfocused
-                };
-                var colors = new int[]
-                {
-                    ThemeHelpers.PrimaryColor, 
-                    ThemeHelpers.MutedColor
-                };
-                Control.BackgroundTintList = new ColorStateList(states, colors);
-            }
+            //if (Control != null)
+            //{
+            //    var states = new[]
+            //    {
+            //        new[] { Android.Resource.Attribute.StateFocused }, // focused
+            //        new[] { -Android.Resource.Attribute.StateFocused }, // unfocused
+            //    };
+            //    var colors = new int[]
+            //    {
+            //        ThemeHelpers.PrimaryColor, 
+            //        ThemeHelpers.MutedColor
+            //    };
+            //    Control.BackgroundTintList = new ColorStateList(states, colors);
+            //}
         }
     }
 }

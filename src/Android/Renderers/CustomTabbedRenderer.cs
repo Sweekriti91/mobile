@@ -7,9 +7,8 @@ using Google.Android.Material.Navigation;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Platform;
-using Xamarin.Forms.Platform.Android.AppCompat;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat;
 
-[assembly: ExportRenderer(typeof(TabbedPage), typeof(CustomTabbedRenderer))]
 namespace Bit.Droid.Renderers
 {
     public class CustomTabbedRenderer : TabbedPageRenderer, NavigationBarView.IOnItemReselectedListener
