@@ -5,8 +5,7 @@ using Android.Content;
 using Bit.Core;
 using Bit.Core.Abstractions;
 using Bit.Droid.Receivers;
-using Plugin.CurrentActivity;
- using Microsoft.Maui.Essentials;
+using Microsoft.Maui.Essentials;
 
 namespace Bit.Droid.Services
 {
@@ -20,9 +19,9 @@ namespace Bit.Droid.Services
             _stateService = stateService;
 
             _clearClipboardPendingIntent = new Lazy<PendingIntent>(() =>
-                PendingIntent.GetBroadcast(CrossCurrentActivity.Current.Activity,
+                PendingIntent.GetBroadcast(Microsoft.Maui.Essentials.Platform.CurrentActivity,
                                            0,
-                                           new Intent(CrossCurrentActivity.Current.Activity, typeof(ClearClipboardAlarmReceiver)),
+                                           new Intent(Microsoft.Maui.Essentials.Platform.CurrentActivity, typeof(ClearClipboardAlarmReceiver)),
                                            PendingIntentFlags.UpdateCurrent));
         }
 
@@ -50,7 +49,7 @@ namespace Bit.Droid.Services
                 return;
             }
             var triggerMs = Java.Lang.JavaSystem.CurrentTimeMillis() + clearMs;
-            var alarmManager = CrossCurrentActivity.Current.Activity.GetSystemService(Context.AlarmService) as AlarmManager;
+            var alarmManager = Microsoft.Maui.Essentials.Platform.CurrentActivity.GetSystemService(Context.AlarmService) as AlarmManager;
             alarmManager.Set(AlarmType.Rtc, triggerMs, _clearClipboardPendingIntent.Value);
         }
     }

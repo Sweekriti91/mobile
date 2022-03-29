@@ -21,6 +21,7 @@ using Bit.Droid.Utilities;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Essentials;
+using FileProvider = Microsoft.Maui.Essentials.FileProvider;
 
 namespace Bit.Droid
 {
@@ -29,7 +30,7 @@ namespace Bit.Droid
     // LaunchMode defined in values/manifest.xml for Android 10- and values-v30/manifest.xml for Android 11+
     // See https://github.com/bitwarden/mobile/pull/1673 for details
     [Register("com.x8bit.bitwarden.MainActivity")]
-    public class MainActivity : MauiAppCompatActivity
+    public class MainActivity : Microsoft.Maui.Controls.Compatibility.Platform.Android.FormsAppCompatActivity
     {
         private IDeviceActionService _deviceActionService;
         private IMessagingService _messagingService;
@@ -59,8 +60,8 @@ namespace Bit.Droid
             _appIdService = ServiceContainer.Resolve<IAppIdService>("appIdService");
             _eventService = ServiceContainer.Resolve<IEventService>("eventService");
 
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            TabLayoutResource = Android.Resource.Layout.Tabbar;
+            ToolbarResource = Android.Resource.Layout.Toolbar;
 
             // this needs to be called here before base.OnCreate(...)
             Intent?.Validate();
@@ -83,9 +84,9 @@ namespace Bit.Droid
             }
 
             Microsoft.Maui.Essentials.Platform.Init(this, savedInstanceState);
-            //Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            //Microsoft.Maui.Controls.Compatibility.Forms.Init(this, savedInstanceState);
             _appOptions = GetOptions();
-            LoadApplication(new App.App(_appOptions));
+             LoadApplication(new App.App(_appOptions));
 
             _broadcasterService.Subscribe(_activityKey, (message) =>
             {
@@ -99,8 +100,7 @@ namespace Bit.Droid
                 }
                 else if (message.Command == "finishMainActivity")
                 {
-                    //Microsoft.Maui.Controls.Application.dDispatcher.BeginInvokeOnMainThread(() => Finish());
-                    //Microsoft.Maui.Essentials.Device.BeginInvokeOnMainThread(() => Finish());
+                    Microsoft.Maui.Controls.Device.BeginInvokeOnMainThread(() => Finish());
                 }
                 else if (message.Command == "listenYubiKeyOTP")
                 {
@@ -108,7 +108,7 @@ namespace Bit.Droid
                 }
                 else if (message.Command == "updatedTheme")
                 {
-                    //Xamarin.Forms.Device.BeginInvokeOnMainThread(() => AppearanceAdjustments());
+                    Microsoft.Maui.Controls.Device.BeginInvokeOnMainThread(() => AppearanceAdjustments());
                 }
                 else if (message.Command == "exit")
                 {
