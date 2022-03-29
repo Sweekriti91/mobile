@@ -10,6 +10,18 @@
 	<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <AndroidLibrary Remove="Platforms\**" />
+    <AndroidNativeLibrary Remove="Platforms\**" />
+    <Compile Remove="Platforms\**" />
+    <EmbeddedResource Remove="Platforms\**" />
+    <JavaSourceJar Remove="Platforms\**" />
+    <MauiCss Remove="Platforms\**" />
+    <MauiXaml Remove="Platforms\**" />
+    <None Remove="Platforms\**" />
+    <TransformFile Remove="Platforms\**" />
+  </ItemGroup>
+
   <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -129,7 +141,6 @@
   </ItemGroup>-->
 
   <ItemGroup>
-    <Folder Include="Platforms\Android\Resources\" />
     <Folder Include="Resources\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Controls\AccountSwitchingOverlay\" />
