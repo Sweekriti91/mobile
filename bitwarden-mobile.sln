@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32317.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "src\Android\Android.csproj", "{304400AF-F0ED-40FA-B102-EA3C3EC43E4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Android", "src\Android\Android.csproj", "{304400AF-F0ED-40FA-B102-EA3C3EC43E4F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "src\App\App.csproj", "{EE44C6A1-2A85-45FE-8D9B-BF1D5F88809C}"
 EndProject
@@ -34,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "store\google\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS.Core", "src\iOS.Core\iOS.Core.csproj", "{E71F3053-056C-4381-9638-048ED73BDFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "src\iOS\iOS.csproj", "{599E0201-420A-4C3E-A7BA-5349F72E0B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOS", "src\iOS\iOS.csproj", "{599E0201-420A-4C3E-A7BA-5349F72E0B15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS.Extension", "src\iOS.Extension\iOS.Extension.csproj", "{324BE76C-38FA-4F11-8BB1-95C7B3B1B545}"
 EndProject
@@ -282,7 +282,7 @@ Global
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.Debug|iPhone.Build.0 = Debug|iPhone
 		{599E0201-420A-4C3E-A7BA-5349F72E0B15}.Debug|iPhone.Deploy.0 = Debug|iPhone

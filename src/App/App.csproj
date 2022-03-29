@@ -6,8 +6,10 @@
     <OutputType>Exe</OutputType>
     <UseMaui>true</UseMaui>
 	<ImplicitUsings>enable</ImplicitUsings>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.2</SupportedOSPlatformVersion>
-	<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">15.2</SupportedOSPlatformVersion>
+	<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">31.0</SupportedOSPlatformVersion>
+    <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,7 +32,7 @@
   <ItemGroup>
     <!-- <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.4.0" />
     <PackageReference Include="Plugin.Fingerprint" Version="2.1.4" /> -->
-    <PackageReference Include="CommunityToolkit.Maui" Version="1.0.0-pre7" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="1.0.0-pre8" />
     <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.0-preview.209" />
     <PackageReference Include="SkiaSharp.Views.Maui.Controls.Compatibility" Version="2.88.0-preview.209" />
     <PackageReference Include="SkiaSharp.Views.Maui.Core" Version="2.88.0-preview.209" />

@@ -21,7 +21,7 @@ using Bit.App.Pages;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Bit.App;
-using Microsoft.Maui.Controls.Compatibility.Hosting;
+//using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using System.Collections.Generic;
 using Bit.Droid.Renderers;
@@ -48,7 +48,7 @@ namespace Bit.Droid
             var builder = MauiProgram.CreateMauiApp();
 
             builder
-                .UseMauiCompatibility()
+                //.UseMauiCompatibility()
                 .ConfigureMauiHandlers(handlers =>
                 {
                     handlers.AddCompatibilityRenderer(typeof(CustomEditorRenderer),
