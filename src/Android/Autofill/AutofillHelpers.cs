@@ -322,18 +322,18 @@ namespace Bit.Droid.Autofill
                 pendingIntent = PendingIntent.GetService(context, 0, new Intent(),
                     PendingIntentFlags.OneShot | PendingIntentFlags.UpdateCurrent);
             }
-            var slice = CreateInlinePresentationSlice(
-                inlinePresentationSpec,
-                text,
-                subtext,
-                iconId,
-                "Autofill option",
-                pendingIntent,
-                context);
-            if (slice != null)
-            {
-                return new InlinePresentation(slice, inlinePresentationSpec, false);
-            }
+            //var slice = CreateInlinePresentationSlice(
+            //    inlinePresentationSpec,
+            //    text,
+            //    subtext,
+            //    iconId,
+            //    "Autofill option",
+            //    pendingIntent,
+            //    context);
+            //if (slice != null)
+            //{
+            //    return new InlinePresentation(slice, inlinePresentationSpec, false);
+            //}
             return null;
         }
 

@@ -22,7 +22,7 @@ namespace Bit.Droid.Effects
             //{
             //    return;
             //}
-            bottomNavigationView.LabelVisibilityMode = LabelVisibilityMode.LabelVisibilityLabeled;
+            //bottomNavigationView.LabelVisibilityMode = LabelVisibilityMode.LabelVisibilityLabeled;
         }
 
         protected override void OnDetached()
