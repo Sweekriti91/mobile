@@ -1,6 +1,10 @@
 ﻿using Android.Graphics;
 using Bit.App.Utilities;
-using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+//using Microsoft.Maui.Controls.Platform;
+//using Microsoft.Maui.Controls.Compatibility.Android;
+using Microsoft.Maui.Graphics;
+using Color = Android.Graphics.Color;
 
 namespace Bit.Droid.Utilities
 {
@@ -46,14 +50,14 @@ namespace Bit.Droid.Utilities
             SetThemeVariables(theme, osDarkModeEnabled);
         }
         
-        public static int GetDialogTheme()
-        {
-            if (LightTheme)
-            {
-                return Android.Resource.Style.ThemeMaterialLightDialog;
-            }
-            return Android.Resource.Style.ThemeMaterialDialog;
-        }
+        //public static int GetDialogTheme()
+        //{
+        //    if (LightTheme)
+        //    {
+        //        return Android.Resource.Style.ThemeMaterialLightDialog;
+        //    }
+        //    return Android.Resource.Style.ThemeMaterialDialog;
+        //}
         
         private static void SetThemeVariables(string theme, bool osDarkModeEnabled)
         {

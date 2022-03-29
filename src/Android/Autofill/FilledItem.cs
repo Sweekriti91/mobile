@@ -30,19 +30,19 @@ namespace Bit.Droid.Autofill
             switch (Type)
             {
                 case CipherType.Login:
-                    Icon = Resource.Drawable.login;
+                    Icon = Android.Resource.Drawable.login;
                     _password = cipher.Login.Password;
                     break;
                 case CipherType.Card:
                     _cardNumber = cipher.Card.Number;
-                    Icon = Resource.Drawable.card;
+                    Icon = Android.Resource.Drawable.card;
                     _cardName = cipher.Card.CardholderName;
                     _cardCode = cipher.Card.Code;
                     _cardExpMonth = cipher.Card.ExpMonth;
                     _cardExpYear = cipher.Card.ExpYear;
                     break;
                 case CipherType.Identity:
-                    Icon = Resource.Drawable.id;
+                    Icon = Android.Resource.Drawable.id;
                     _idPhone = cipher.Identity.Phone;
                     _idEmail = cipher.Identity.Email;
                     _idUsername = cipher.Identity.Username;
@@ -50,14 +50,14 @@ namespace Bit.Droid.Autofill
                     _idPostalCode = cipher.Identity.PostalCode;
                     break;
                 default:
-                    Icon = Resource.Drawable.login;
+                    Icon = Android.Resource.Drawable.login;
                     break;
             }
         }
 
         public string Name { get; set; }
         public string Subtitle { get; set; } = string.Empty;
-        public int Icon { get; set; } = Resource.Drawable.login;
+        public int Icon { get; set; } = Android.Resource.Drawable.login;
         public CipherType Type { get; set; }
 
         public bool ApplyToFields(FieldCollection fieldCollection, Dataset.Builder datasetBuilder)

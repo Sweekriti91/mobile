@@ -16,13 +16,13 @@
   <uses-feature android:name="android.hardware.camera" android:required="false"/>
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
 
-  <application android:label="Bitwarden" android:theme="@style/LaunchTheme" android:allowBackup="false" tools:replace="android:allowBackup" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:networkSecurityConfig="@xml/network_security_config">
+  <application android:label="Bitwarden" android:allowBackup="false" tools:replace="android:allowBackup" >
     <provider android:name="androidx.core.content.FileProvider" android:authorities="com.x8bit.bitwarden.fileprovider" android:exported="false" android:grantUriPermissions="true">
-      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS"/>
     </provider>
 
     <meta-data android:name="android.max_aspect" android:value="2.1"/>
-    <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+    <meta-data android:name="android.content.APP_RESTRICTIONS"/>
 
     <!-- Support for Samsung "Multi Window" mode (for Android < 7.0 users) -->
     <meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true"/>
@@ -31,7 +31,7 @@
     <!-- Support for LG "Dual Window" mode (for Android < 7.0 users) -->
     <meta-data android:name="com.lge.support.SPLIT_WINDOW" android:value="true"/>
 	<!-- Declare MainActivity manually so we can set LaunchMode using API dependant resource -->
-	<activity android:name="com.x8bit.bitwarden.MainActivity" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|uiMode" android:exported="true" android:icon="@mipmap/ic_launcher" android:label="Bitwarden" android:launchMode="@integer/launchModeAPIlevel" android:theme="@style/LaunchTheme">
+	<activity android:name="com.x8bit.bitwarden.MainActivity" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|uiMode" android:exported="true" android:label="Bitwarden">
 	  <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 		<category android:name="android.intent.category.LAUNCHER"/>

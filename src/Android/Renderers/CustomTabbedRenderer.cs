@@ -33,21 +33,21 @@ namespace Bit.Droid.Renderers
 
         private BottomNavigationView GetBottomNavigationView()
         {
-            for (var i = 0; i < ViewGroup.ChildCount; i++)
-            {
-                var childView = ViewGroup.GetChildAt(i);
-                if (childView is ViewGroup viewGroup)
-                {
-                    for (var j = 0; j < viewGroup.ChildCount; j++)
-                    {
-                        var childRelativeLayoutView = viewGroup.GetChildAt(j);
-                        if (childRelativeLayoutView is BottomNavigationView bottomNavigationView)
-                        {
-                            return bottomNavigationView;
-                        }
-                    }
-                }
-            }
+            //for (var i = 0; i < ViewGroup.ChildCount; i++)
+            //{
+            //    var childView = ViewGroup.GetChildAt(i);
+            //    if (childView is ViewGroup viewGroup)
+            //    {
+            //        for (var j = 0; j < viewGroup.ChildCount; j++)
+            //        {
+            //            var childRelativeLayoutView = viewGroup.GetChildAt(j);
+            //            if (childRelativeLayoutView is BottomNavigationView bottomNavigationView)
+            //            {
+            //                return bottomNavigationView;
+            //            }
+            //        }
+            //    }
+            //}
             return null;
         }
 

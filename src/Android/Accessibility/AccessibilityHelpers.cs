@@ -694,13 +694,13 @@ namespace Bit.Droid.Accessibility
         public static LinearLayout GetOverlayView(Context context)
         {
             var inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
-            var view = (LinearLayout)inflater.Inflate(Resource.Layout.autofill_listitem, null);
-            var text1 = (TextView)view.FindViewById(Resource.Id.text1);
-            var text2 = (TextView)view.FindViewById(Resource.Id.text2);
-            var icon = (ImageView)view.FindViewById(Resource.Id.icon);
+            var view = (LinearLayout)inflater.Inflate(Android.Resource.Layout.autofill_listitem, null);
+            var text1 = (TextView)view.FindViewById(Android.Resource.Id.text1);
+            var text2 = (TextView)view.FindViewById(Android.Resource.Id.text2);
+            var icon = (ImageView)view.FindViewById(Android.Resource.Id.icon);
             text1.Text = AppResources.AutofillWithBitwarden;
             text2.Text = AppResources.GoToMyVault;
-            icon.SetImageResource(Resource.Drawable.shield);
+            icon.SetImageResource(Android.Resource.Drawable.shield);
             return view;
         }
 

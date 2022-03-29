@@ -272,14 +272,14 @@ namespace Bit.Droid.Autofill
             var overlayPresentation = BuildOverlayPresentation(
                 AppResources.AutofillWithBitwarden,
                 locked ? AppResources.VaultIsLocked : AppResources.GoToMyVault,
-                Resource.Drawable.icon,
+                Android.Resource.Drawable.icon,
                 context);
 
             var inlinePresentation = BuildInlinePresentation(
                 inlinePresentationSpecs?.Last(), 
                 AppResources.Bitwarden, 
                 locked ? AppResources.VaultIsLocked : AppResources.MyVault, 
-                Resource.Drawable.icon, 
+                Android.Resource.Drawable.icon, 
                 pendingIntent, 
                 context);
 
@@ -301,10 +301,10 @@ namespace Bit.Droid.Autofill
         public static RemoteViews BuildOverlayPresentation(string text, string subtext, int iconId, Context context)
         {
             var packageName = context.PackageName;
-            var view = new RemoteViews(packageName, Resource.Layout.autofill_listitem);
-            view.SetTextViewText(Resource.Id.text1, text);
-            view.SetTextViewText(Resource.Id.text2, subtext);
-            view.SetImageViewResource(Resource.Id.icon, iconId);
+            var view = new RemoteViews(packageName, Android.Resource.Layout.autofill_listitem);
+            view.SetTextViewText(Android.Resource.Id.text1, text);
+            view.SetTextViewText(Android.Resource.Id.text2, subtext);
+            view.SetImageViewResource(Android.Resource.Id.icon, iconId);
             return view;
         }
 
@@ -337,45 +337,45 @@ namespace Bit.Droid.Autofill
             return null;
         }
 
-        private static Slice CreateInlinePresentationSlice(
-            InlinePresentationSpec inlinePresentationSpec,
-            string text,
-            string subtext,
-            int iconId,
-            string contentDescription,
-            PendingIntent pendingIntent,
-            Context context)
-        {
-            var imeStyle = inlinePresentationSpec.Style;
-            if (!UiVersions.GetVersions(imeStyle).Contains(UiVersions.InlineUiVersion1))
-            {
-                return null;
-            }
-            var contentBuilder = InlineSuggestionUi.NewContentBuilder(pendingIntent)
-                .SetContentDescription(contentDescription);
-            if (!string.IsNullOrWhiteSpace(text))
-            {
-                contentBuilder.SetTitle(text);
-            }
-            if (!string.IsNullOrWhiteSpace(subtext))
-            {
-                contentBuilder.SetSubtitle(subtext);
-            }
-            if (iconId > 0)
-            {
-                var icon = Icon.CreateWithResource(context, iconId);
-                if (icon != null)
-                {
-                    if (iconId == Resource.Drawable.icon)
-                    {
-                        // Don't tint our logo
-                        icon.SetTintBlendMode(BlendMode.Dst);
-                    }
-                    contentBuilder.SetStartIcon(icon);
-                }
-            }
-            return contentBuilder.Build().JavaCast<InlineSuggestionUi.Content>()?.Slice;
-        }
+        //private static Slice CreateInlinePresentationSlice(
+        //    InlinePresentationSpec inlinePresentationSpec,
+        //    string text,
+        //    string subtext,
+        //    int iconId,
+        //    string contentDescription,
+        //    PendingIntent pendingIntent,
+        //    Context context)
+        //{
+        //    var imeStyle = inlinePresentationSpec.Style;
+        //    if (!UiVersions.GetVersions(imeStyle).Contains(UiVersions.InlineUiVersion1))
+        //    {
+        //        return null;
+        //    }
+        //    var contentBuilder = InlineSuggestionUi.NewContentBuilder(pendingIntent)
+        //        .SetContentDescription(contentDescription);
+        //    if (!string.IsNullOrWhiteSpace(text))
+        //    {
+        //        contentBuilder.SetTitle(text);
+        //    }
+        //    if (!string.IsNullOrWhiteSpace(subtext))
+        //    {
+        //        contentBuilder.SetSubtitle(subtext);
+        //    }
+        //    if (iconId > 0)
+        //    {
+        //        var icon = Icon.CreateWithResource(context, iconId);
+        //        if (icon != null)
+        //        {
+        //            if (iconId == Android.Resource.Drawable.icon)
+        //            {
+        //                // Don't tint our logo
+        //                icon.SetTintBlendMode(BlendMode.Dst);
+        //            }
+        //            contentBuilder.SetStartIcon(icon);
+        //        }
+        //    }
+        //    return contentBuilder.Build().JavaCast<Android.Views.InlineSuggestionUi.Content>()?.Slice;
+        //}
 
         public static void AddSaveInfo(Parser parser, FillRequest fillRequest, FillResponse.Builder responseBuilder, 
             FieldCollection fields)

@@ -52,7 +52,7 @@ namespace Bit.Droid.Renderers
             if (e.PropertyName == Entry.IsPasswordProperty.PropertyName)
             {
                 // Check if field type is text, otherwise ignore (numeric passwords, etc.)
-                EditText.InputType = Element.Keyboard.ToInputType();
+                //EditText.InputType = Element.Keyboard.GetType();
                 bool isText = (EditText.InputType & InputTypes.ClassText) == InputTypes.ClassText,
                     isNumber = (EditText.InputType & InputTypes.ClassNumber) == InputTypes.ClassNumber;
                 if (isText || isNumber)

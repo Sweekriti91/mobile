@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using Android.Content;
+using Android.Graphics;
 using Android.Graphics.Drawables;
 using AndroidX.Core.Content.Resources;
 using Bit.App.Controls;
@@ -37,12 +38,12 @@ namespace Bit.Droid.Renderers
         {
             if (Control != null && Element is ExtendedSlider view)
             {
-                var t = ResourcesCompat.GetDrawable(Resources, Resource.Drawable.slider_thumb, null);
+                var t = ResourcesCompat.GetDrawable(Resources, Android.Resource.Drawable.slider_thumb, null);
                 if (t is GradientDrawable thumb)
                 {
-                    if (view.ThumbColor == Color.Default)
+                    if (view.ThumbColor == null)
                     {
-                        thumb.SetColor(Color.White.ToAndroid());
+                        thumb.SetColor(Color.White);
                     }
                     else
                     {

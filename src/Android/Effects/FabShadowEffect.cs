@@ -15,7 +15,7 @@ namespace Bit.Droid.Effects
             if (Control is Android.Widget.Button button)
             {
                 var gd = new GradientDrawable();
-                gd.SetColor(ThemeHelpers.FabColor);
+                //gd.SetColor((Android.Graphics.Color)ThemeHelpers.FabColor);
                 gd.SetCornerRadius(100);
                 
                 button.SetBackground(gd);
