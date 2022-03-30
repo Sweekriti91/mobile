@@ -5,24 +5,13 @@
     <RootNamespace>Bit.App</RootNamespace>
     <OutputType>Exe</OutputType>
     <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
 	<ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">15.2</SupportedOSPlatformVersion>
 	<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">31.0</SupportedOSPlatformVersion>
     <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
 
   </PropertyGroup>
-
-  <ItemGroup>
-    <AndroidLibrary Remove="Platforms\**" />
-    <AndroidNativeLibrary Remove="Platforms\**" />
-    <Compile Remove="Platforms\**" />
-    <EmbeddedResource Remove="Platforms\**" />
-    <JavaSourceJar Remove="Platforms\**" />
-    <MauiCss Remove="Platforms\**" />
-    <MauiXaml Remove="Platforms\**" />
-    <None Remove="Platforms\**" />
-    <TransformFile Remove="Platforms\**" />
-  </ItemGroup>
 
   <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>pdbonly</DebugType>
@@ -143,6 +132,8 @@
   </ItemGroup>-->
 
   <ItemGroup>
+    <Folder Include="Platforms\Android\" />
+    <Folder Include="Platforms\iOS\" />
     <Folder Include="Resources\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Controls\AccountSwitchingOverlay\" />

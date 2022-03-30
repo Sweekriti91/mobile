@@ -1,7 +1,7 @@
 ﻿using Bit.Core.Models.View;
 using System.Threading.Tasks;
 
-namespace Bit.App.Abstractions
+namespace Bit.App
 {
     public interface IDeviceActionService
     {
