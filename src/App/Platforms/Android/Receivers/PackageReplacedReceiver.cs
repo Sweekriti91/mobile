@@ -4,6 +4,7 @@ using Bit.App.Abstractions;
 using Bit.App.Utilities;
 using Bit.Core.Abstractions;
 using Bit.Core.Utilities;
+using Bit.App;
 
 namespace Bit.Droid.Receivers
 {

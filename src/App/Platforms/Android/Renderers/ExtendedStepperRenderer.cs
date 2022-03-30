@@ -8,6 +8,8 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Controls.Platform;
+using Bit.App;
+using BlendMode = Android.Graphics.BlendMode;
 
 namespace Bit.Droid.Renderers
 {

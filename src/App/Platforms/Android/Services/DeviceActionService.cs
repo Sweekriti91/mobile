@@ -33,6 +33,8 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls.Compatibility.Android;
 using Microsoft.Maui.Controls;
 using Application = Microsoft.Maui.Controls.Application;
+using Bit.Droid;
+using FileProvider = Microsoft.Maui.Essentials.FileProvider;
 
 namespace Bit.App
 {
@@ -82,7 +84,7 @@ namespace Bit.App
             }
         }
 
-        public Bit.Core.Enums.DeviceType DeviceType => DeviceType.Android;
+        public Bit.Core.Enums.DeviceType DeviceType => Bit.Core.Enums.DeviceType.Android;
 
         public void Toast(string text, bool longDuration = false)
         {

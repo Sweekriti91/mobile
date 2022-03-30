@@ -6,6 +6,8 @@ using Android.Views.Autofill;
 using static Android.App.Assist.AssistStructure;
 using Android.Text;
 using static Android.Views.ViewStructure;
+using Bit.App;
+using View = Android.Views.View;
 
 namespace Bit.Droid.Autofill
 {

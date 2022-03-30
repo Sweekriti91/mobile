@@ -4,6 +4,8 @@ using Android.Views.Autofill;
 using System.Linq;
 using Android.Text;
 using Android.Views;
+using Bit.App;
+using View = Android.Views.View;
 
 namespace Bit.Droid.Autofill
 {

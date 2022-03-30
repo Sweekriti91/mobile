@@ -12,6 +12,9 @@ using Android.Views.Accessibility;
 using Android.Widget;
 using Bit.App.Resources;
 using Bit.Core;
+using Bit.App;
+using Point = Android.Graphics.Point;
+using Rect = Android.Graphics.Rect;
 
 namespace Bit.Droid.Accessibility
 {
@@ -655,14 +658,14 @@ namespace Bit.Droid.Accessibility
         {
             if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
             {
-                if (Settings.CanDrawOverlays(Application.Context))
+                if (Settings.CanDrawOverlays(Android.App.Application.Context))
                 {
                     return true;
                 }
                 
-                var appOpsMgr = (AppOpsManager)Application.Context.GetSystemService(Context.AppOpsService);
+                var appOpsMgr = (AppOpsManager)Android.App.Application.Context.GetSystemService(Context.AppOpsService);
                 var mode = appOpsMgr.CheckOpNoThrow("android:system_alert_window", Process.MyUid(),
-                    Application.Context.PackageName);
+                    Android.App.Application.Context.PackageName);
                 if (mode == AppOpsManagerMode.Allowed || mode == AppOpsManagerMode.Ignored)
                 {
                     return true;
@@ -670,13 +673,13 @@ namespace Bit.Droid.Accessibility
                 
                 try
                 {
-                    var wm = Application.Context.GetSystemService(Context.WindowService)
+                    var wm = Android.App.Application.Context.GetSystemService(Context.WindowService)
                         .JavaCast<IWindowManager>();
                     if (wm == null)
                     {
                         return false;
                     }
-                    var testView = new View(Application.Context);
+                    var testView = new Android.Views.View(Android.App.Application.Context);
                     var layoutParams = GetOverlayLayoutParams();
                     wm.AddView(testView, layoutParams);
                     wm.RemoveView(testView);
@@ -742,14 +745,14 @@ namespace Bit.Droid.Accessibility
             }
             anchorViewY -= GetStatusBarHeight(service);
 
-            return new Point(anchorViewX, anchorViewY);
+            return new Android.Graphics.Point(anchorViewX, anchorViewY);
         }
 
         public static Android.Graphics.Point GetOverlayAnchorPosition(AccessibilityService service, AccessibilityNodeInfo anchorNode, 
             AccessibilityNodeInfo root, IEnumerable<AccessibilityWindowInfo> windows, int overlayViewHeight, 
             bool isOverlayAboveAnchor)
         {
-            Point point = null;
+            Android.Graphics.Point point = null;
             if (anchorNode != null)
             {
                 // Update node's info since this is still a reference from an older event

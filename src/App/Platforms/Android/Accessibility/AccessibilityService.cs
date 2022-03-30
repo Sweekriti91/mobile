@@ -12,6 +12,8 @@ using Android.Widget;
 using Bit.App.Resources;
 using Bit.Core.Abstractions;
 using Bit.Core.Utilities;
+using Bit.App;
+using View = Android.Views.View;
 
 namespace Bit.Droid.Accessibility
 {

@@ -22,8 +22,9 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Essentials;
 using FileProvider = Microsoft.Maui.Essentials.FileProvider;
+using Bit.App;
 
-namespace Bit.App
+namespace Bit.Droid
 {
     // Activity and IntentFilter declarations have been moved to Properties/AndroidManifest.xml
     // They have been hardcoded so we can use the default LaunchMode on Android 11+
