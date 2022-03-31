@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
     <RootNamespace>Bit.App</RootNamespace>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <UseMaui>true</UseMaui>
 	<ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">15.2</SupportedOSPlatformVersion>
